@@ -27,6 +27,14 @@ Bu proje, ham sipariş verisinden bu iki grubu otomatik çıkarıp, her biri iç
 | **Çıktı** | Grafik + tablo (dashboard) | Müşteri listesi + önerilen mesaj metni |
 | **Kod** | [`src/analytics.js`](src/analytics.js) | [`src/segmentation.js`](src/segmentation.js) |
 
+## Ekran görüntüleri
+
+## Ekran görüntüleri
+<img width="1897" height="956" alt="image" src="https://github.com/user-attachments/assets/2bab344c-a118-4beb-8314-e6b104fc15c9" />
+
+<img width="1892" height="952" alt="image" src="https://github.com/user-attachments/assets/2db63932-bbe9-4d03-b136-cf5b1ae6051e" />
+
+
 ## Hızlı başlangıç
 
 ```bash
