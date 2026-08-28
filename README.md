@@ -114,7 +114,7 @@ kaldığı sürece hiç değişmeden çalışmaya devam eder.
 ## Bilinen sınırlamalar
 
 - Veri sentetik; gerçek mağaza verisiyle henüz doğrulanmadı
-- Mesaj gönderme şu an **simülasyon** — gerçek SMS/e-posta/WhatsApp entegrasyonu yok
+- Mesaj gönderme şu an **simülasyon** gerçek SMS/e-posta/WhatsApp entegrasyonu yok
 - Web sürümüne taşıma henüz yapılmadı (renderer katmanı buna hazır tasarlandı)
 
 ## Yol haritası
