@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Musteri Analiz Motoru</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Musteri Analiz &amp; Segmentasyon Motoru</h1>
+    <p class="subtitle">Simdilik sentetik veri ile calisiyor — Electron masaustu surumu</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="dashboard">Motor 1: Analiz Paneli</button>
+    <button class="tab-btn" data-tab="segments">Motor 2: Segmentasyon &amp; Mesajlar</button>
+  </nav>
+
+  <main>
+    <!-- ===================== MOTOR 1: ANALIZ PANELI ===================== -->
+    <section id="dashboard" class="tab-content active">
+      <div class="cards">
+        <div class="card">
+          <span class="card-label">Toplam Musteri</span>
+          <span class="card-value" id="kpi-total-customers">-</span>
+        </div>
+        <div class="card">
+          <span class="card-label">Toplam Ciro</span>
+          <span class="card-value" id="kpi-total-revenue">-</span>
+        </div>
+        <div class="card">
+          <span class="card-label">Musteri Basina Ort. Harcama</span>
+          <span class="card-value" id="kpi-avg-spent">-</span>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Harcama Yuzdelik Dilimleri</h2>
+          <canvas id="chart-percentiles"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Siparis Sikligi Dagilimi</h2>
+          <canvas id="chart-frequency"></canvas>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Urun Bazinda Tekrar Alim Orani</h2>
+        <p class="hint">Bir musterinin ayni urunu birden fazla kez alma orani — sadakat/talep sinyali</p>
+        <table id="table-products">
+          <thead>
+            <tr>
+              <th>Urun</th>
+              <th>Toplam Alici</th>
+              <th>Tekrar Alan</th>
+              <th>Tekrar Alim %</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== MOTOR 2: SEGMENTASYON ===================== -->
+    <section id="segments" class="tab-content">
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Tek Seferlik Musteriler <span class="badge" id="badge-onetime">0</span></h2>
+          <p class="hint">Bir kere alisveris yapip donmemis, geri kazanma mesaji icin aday</p>
+          <table id="table-onetime">
+            <thead>
+              <tr><th>Musteri</th><th>Son Siparis</th><th>Harcama</th><th>Onerilen Mesaj</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <button class="action-btn" id="btn-send-onetime">Toplu Mesaj Gonder (simulasyon)</button>
+        </div>
+
+        <div class="panel">
+          <h2>Surekli / Sadik Musteriler <span class="badge" id="badge-loyal">0</span></h2>
+          <p class="hint">Duzenli alisveris yapan, indirim mesaji icin aday</p>
+          <table id="table-loyal">
+            <thead>
+              <tr><th>Musteri</th><th>Siparis Sayisi</th><th>Harcama</th><th>Onerilen Mesaj</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <button class="action-btn" id="btn-send-loyal">Indirim Mesaji Gonder (simulasyon)</button>
+        </div>
+      </div>
+      <p id="send-result" class="send-result"></p>
+    </section>
+  </main>
+
+  <script src="vendor_chart.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

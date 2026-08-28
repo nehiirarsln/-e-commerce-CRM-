@@ -1,0 +1,24 @@
+{
+  "name": "musteri-analiz-motoru",
+  "version": "1.0.0",
+  "description": "Musteri veri analiz paneli + segmentasyon/mesajlasma motoru (Electron ogrenim projesi)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.ornek.musterianaliz",
+    "productName": "Musteri Analiz Motoru",
+    "files": [
+      "**/*"
+    ]
+  },
+  "keywords": []
+}

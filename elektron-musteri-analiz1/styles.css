@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #e9fc94;
+  color: #000000;
+}
+
+header {
+  background: #95cc61;
+  color: rgb(0, 0, 0);
+  padding: 20px 32px;
+}
+header h1 { margin: 0; font-size: 22px; }
+header .subtitle { margin: 4px 0 0; font-size: 13px; color: #000000; }
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  padding: 12px 32px 0;
+  background: #f3f4f7;
+}
+.tab-btn {
+  border: none;
+  background: #e2e5ea;
+  padding: 10px 18px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #444;
+}
+.tab-btn.active {
+  background: white;
+  font-weight: 600;
+  color: #010100;
+}
+
+main { padding: 24px 32px 48px; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 16px 20px;
+  flex: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.card-label { display: block; font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.card-value { display: block; font-size: 24px; font-weight: 700; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.panel {
+  background: white;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.panel h2 { margin: 0 0 12px; font-size: 16px; }
+.hint { font-size: 12px; color: #000000; margin-top: -6px; margin-bottom: 12px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; }
+th { color: #000000; font-weight: 600; }
+
+.badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #000000;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-left: 6px;
+}
+
+.action-btn {
+  margin-top: 14px;
+  background: #066100;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.action-btn:hover { background: #2eed6e; }
+
+.send-result {
+  font-size: 13px;
+  color: #ebfc8b;
+  font-weight: 600;
+}
