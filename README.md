@@ -16,7 +16,7 @@ Bir e-ticaret mağazasının sipariş geçmişinde iki soru genelde cevapsız ka
 - **Hangi müşteriler kaybediliyor?** Bir kere alışveriş yapıp bir daha dönmeyen müşteriler fark edilmeden birikir, hiçbir geri kazanma aksiyonu alınmaz.
 - **Hangi müşteriler sadık?** Düzenli alışveriş yapan müşteriler, özel bir indirim veya teşekkür mesajı olmadan diğer müşterilerle aynı muameleyi görür.
 
-Bu proje, ham sipariş verisinden bu iki grubu otomatik çıkarıp, her biri için somut bir aksiyon (mesaj metni) önerir — aynı zamanda bunu önce bir **masaüstü uygulaması** olarak, Electron'un main/renderer mimarisini gerçekten anlayarak kurmayı hedefler.
+Bu proje, ham sipariş verisinden bu iki grubu otomatik çıkarıp, her biri için somut bir aksiyon (mesaj metni) önerir. Aynı zamanda bunu önce bir **masaüstü uygulaması** olarak, Electron'un main/renderer mimarisini gerçekten anlayarak kurmayı hedefler.
 
 ## İki motor, tek panel
 
@@ -64,7 +64,7 @@ masaüstü penceresini açar, iki sekmeli bir dashboard karşılar.
 ```
 
 Renderer sürecinin Node.js'e veya dosya sistemine doğrudan erişimi yoktur
-(`contextIsolation: true`) — tüm veri akışı `preload.js` üzerinden kontrollü
+(`contextIsolation: true`) Tüm veri akışı `preload.js` üzerinden kontrollü
 IPC ile geçer. Bu ayrım, ileride aynı arayüzü bir web sunucusuna bağlarken
 (`main.js` yerine bir API endpoint'i) renderer katmanına hemen hiç
 dokunmamayı mümkün kılar.
@@ -97,7 +97,7 @@ const RULES = {
 
 ## Gerçek veriye geçiş
 
-Sentetik veri katmanı tek bir noktadan değiştirilecek şekilde izole edildi —
+Sentetik veri katmanı tek bir noktadan değiştirilecek şekilde izole edildi.
 `main.js` içindeki `get-dashboard-data` handler'ı:
 
 ```js
